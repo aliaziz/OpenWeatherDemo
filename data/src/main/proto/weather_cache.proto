@@ -1,0 +1,38 @@
+syntax = "proto2";
+
+option java_package = "com.aliziwa.data";
+option java_multiple_files = true;
+
+/*
+Protobuf implementation of Weather model
+*/
+message LocalWeather {
+  required LocalCurrentWeather currentWeather = 1;
+  repeated LocalForeCastWeather forecastWeather = 2;
+}
+
+/*
+Protobuf implementation of CurrentWeather model
+*/
+message LocalCurrentWeather {
+  required string location = 1;
+  required LocalWeatherDetails details = 2;
+  optional string description = 3;
+}
+
+/*
+Protobuf implementation of ForeCastWeather model
+*/
+message LocalForeCastWeather {
+  required string weekDay = 1;
+  required LocalWeatherDetails details = 2;
+}
+/*
+Protobuf implementation of WeatherDetails model
+*/
+message LocalWeatherDetails {
+  required string highTemp = 1;
+  required string lowTemp = 2;
+  required string currentTemp = 3;
+  required string icon = 4;
+}

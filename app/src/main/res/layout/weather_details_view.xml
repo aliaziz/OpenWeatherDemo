@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?><!--Weather details view-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/location_data_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:visibility="gone"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weather_details_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <!--Location-->
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="monospace"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Icon-->
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/currentTempText"
+            app:layout_constraintEnd_toStartOf="@id/currentTempText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_text" />
+
+        <!--Current weather-->
+        <TextView
+            android:id="@+id/currentTempText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iconImageView"
+            app:layout_constraintTop_toBottomOf="@id/location_text" />
+
+        <!--Description-->
+        <TextView
+            android:id="@+id/weather_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="monospace"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iconImageView" />
+
+        <!--High temp-->
+        <TextView
+            android:id="@+id/high_temp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="monospace"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/low_temp_text"
+            app:layout_constraintTop_toBottomOf="@id/weather_description" />
+
+        <!--Low temp-->
+        <TextView
+            android:id="@+id/low_temp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:fontFamily="monospace"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/high_temp_text"
+            app:layout_constraintTop_toBottomOf="@id/weather_description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
