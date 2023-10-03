@@ -12,5 +12,5 @@ Uses: API [OpenWeatherMap API](https://openweathermap.org/api)
 #### Modules:
 * <b>app</b>
 * <b>domain</b>
-* <b>data</b
+* <b>data</b>
   
