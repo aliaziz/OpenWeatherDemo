@@ -1,5 +1,3 @@
-# OpenWeatherDemo
-
 # <b>Open Weather Demo</b>
 Uses: API [OpenWeatherMap API](https://openweathermap.org/api)
 
